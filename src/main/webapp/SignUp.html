@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - PDF Tools</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/SignUP.css">
+</head>
+<body>
+
+<div class="signup-container">
+    <div class="signup-header">
+        <h1>Create Account of PDFlex</h1>
+        <p>Get started with our PDF tools</p>
+    </div>
+
+    <form class="signup-form" action="SignUpHandler" method="POST">
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <i class="fas fa-user input-icon"></i>
+            <input type="text" id="name" name="fullname" placeholder="John Doe" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <i class="fas fa-envelope input-icon"></i>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <i class="fas fa-lock input-icon"></i>
+            <input type="password" id="password" name="password" placeholder="At least 8 characters" minlength="8" required>
+            <div class="password-strength">
+                <div class="strength-bar" id="strength-bar"></div>
+            </div>
+            <div class="password-hint" id="password-hint">Use letters, numbers, symbols</div>
+        </div>
+
+        <div class="form-group">
+            <label for="confirm-password">Confirm Password</label>
+            <i class="fas fa-lock input-icon"></i>
+            <input type="password" id="confirm-password" name="confirmPassword" placeholder="Re-enter password" required>
+        </div>
+
+        <button type="submit" class="signup-btn">Create Account</button>
+
+        <div class="divider">OR</div>
+
+        <button type="button" class="google-btn">
+            <i class="fab fa-google"></i>
+            <span>Sign up with Google</span>
+        </button>
+    </form>
+
+    <div class="signup-footer">
+        <p>Already have an account? <a href="login.jsp">Log in</a></p>
+    </div>
+</div>
+
+<script>
+    // Password strength indicator
+    const passwordInput = document.getElementById('password');
+    const strengthBar = document.getElementById('strength-bar');
+    const passwordHint = document.getElementById('password-hint');
+
+    passwordInput.addEventListener('input', function() {
+        const password = this.value;
+        let strength = 0;
+
+        if (password.length > 0) {
+            passwordHint.style.display = 'block';
+        } else {
+            passwordHint.style.display = 'none';
+        }
+
+        if (password.length >= 8) strength += 1;
+        if (password.match(/[a-z]/) && password.match(/[A-Z]/)) strength += 1;
+        if (password.match(/\d/)) strength += 1;
+        if (password.match(/[^a-zA-Z\d]/)) strength += 1;
+
+        switch(strength) {
+            case 0:
+                strengthBar.style.width = '0%';
+                strengthBar.style.backgroundColor = '#ef4444';
+                break;
+            case 1:
+                strengthBar.style.width = '25%';
+                strengthBar.style.backgroundColor = '#ef4444';
+                break;
+            case 2:
+                strengthBar.style.width = '50%';
+                strengthBar.style.backgroundColor = '#f59e0b';
+                break;
+            case 3:
+                strengthBar.style.width = '75%';
+                strengthBar.style.backgroundColor = '#84cc16';
+                break;
+            case 4:
+                strengthBar.style.width = '100%';
+                strengthBar.style.backgroundColor = '#10b981';
+                break;
+        }
+    });
+    
+</script>
+</body>
+</html>

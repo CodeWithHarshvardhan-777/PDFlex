@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Tools - Your Complete PDF Solution</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/MainPage.css">
+</head>
+<body>
+
+<!-- Header/Navigation -->
+<header>
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <i class="fas fa-file-pdf"></i>
+            <span>PDFlex</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="#tools">Tools</a>
+            <a href="#features">Features</a>
+            <a href="#tech">Technology</a>
+        </div>
+
+        <div class="auth-buttons">
+            <a href="login.html" class="btn btn-outline">Log In</a>
+            <a href="logout.html" class="btn btn-primary">Log Out</a>
+        </div>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Your Complete PDF Solution</h1>
+        <p>Merge, split, compress, convert and edit PDF files with our powerful online tools. Free to use, no installation required.</p>
+    </div>
+</section>
+
+<!-- Tools Section -->
+<section class="tools-section" id="tools">
+    <div class="section-header">
+        <h2>Choose Tools</h2>
+        <p>Select from our collection of PDF tools to get started</p>
+    </div>
+
+    <div class="tools-grid">
+        <div class="tool-card" onclick="location.href='MergePDF.jsp'">
+            <i class="fas fa-object-group"></i>
+            <h3>Merge PDF</h3>
+            <p>Combine multiple PDFs into one document in seconds</p>
+            <span class="tool-badge">Free</span>
+        </div>
+
+        <div class="tool-card" onclick="location.href='split.html'">
+            <i class="fas fa-cut"></i>
+            <h3>Split PDF</h3>
+            <p>Extract pages or split PDFs into multiple files</p>
+            <span class="tool-badge">Free</span>
+        </div>
+
+        <div class="tool-card" onclick="location.href='pdflex-compression.html'">
+            <i class="fas fa-compress-alt"></i>
+            <h3>Compress PDF</h3>
+            <p>Reduce PDF file size while preserving quality</p>
+            <span class="tool-badge">Free</span>
+        </div>
+
+        <div class="tool-card" onclick="location.href='convert.html'">
+            <i class="fas fa-exchange-alt"></i>
+            <h3>Convert PDF</h3>
+            <p>Convert PDFs to Word, Excel, JPG and vice versa</p>
+            <span class="tool-badge">Free</span>
+        </div>
+
+        <div class="tool-card" onclick="location.href='edit.html'">
+            <i class="fas fa-edit"></i>
+            <h3>Edit PDF</h3>
+            <p>Edit text, images and pages in your PDF</p>
+            <span class="tool-badge">Free</span>
+        </div>
+
+        <div class="tool-card" onclick="location.href='pdflex-protectpdf.jsp'">
+            <i class="fas fa-lock"></i>
+            <h3>Protect PDF</h3>
+            <p>Add passwords and permissions to PDFs</p>
+            <span class="tool-badge">Free</span>
+        </div>
+
+        <div class="tool-card" onclick="location.href='ocr.html'">
+            <i class="fas fa-text-height"></i>
+            <h3>OCR PDF</h3>
+            <p>Convert scanned documents into editable text</p>
+            <span class="tool-badge">Free</span>
+        </div>
+
+        <div class="tool-card" onclick="location.href='sign.html'">
+            <i class="fas fa-signature"></i>
+            <h3>Sign PDF</h3>
+            <p>Add digital signatures to your documents</p>
+            <span class="tool-badge">Free</span>
+        </div>
+
+        <div class="tool-card" onclick="location.href='metadata.html'">
+            <i class="fas fa-info-circle"></i>
+            <h3>PDF Metadata</h3>
+            <p>View and edit PDF document information</p>
+            <span class="tool-badge">Free</span>
+        </div>
+
+        <div class="tool-card" onclick="location.href='extract-text.html'">
+            <i class="fas fa-font"></i>
+            <h3>Extract Text</h3>
+            <p>Extract text content from PDF files</p>
+            <span class="tool-badge">Free</span>
+        </div>
+
+        <div class="tool-card" onclick="location.href='fileinfo.jsp'">
+            <i class="fas fa-file-alt"></i>
+            <h3>File Info</h3>
+            <p>Get detailed information about your PDF files</p>
+            <span class="tool-badge">Free</span>
+        </div>
+    </div>
+</section>
+
+<!-- Technology Section -->
+<section class="tech-section" id="tech">
+    <div class="section-header">
+        <h2>Powered by Apache PDFBox</h2>
+        <p>Our PDF tools are built using the powerful Apache PDFBox library</p>
+    </div>
+
+    <div class="tech-grid">
+        <div class="tech-card">
+            <img src="https://pdfbox.apache.org/images/logo.png" alt="Apache PDFBox Logo">
+            <h3>Apache PDFBox</h3>
+            <p>An open source Java tool for working with PDF documents that provides robust features for PDF manipulation.</p>
+            <a href="https://pdfbox.apache.org/" target="_blank" class="btn btn-outline">Learn More</a>
+        </div>
+
+        <div class="tech-card">
+            <i class="fas fa-lock" style="font-size: 3rem; color: var(--primary-color);"></i>
+            <h3>Secure Processing</h3>
+            <p>All processing happens in a secure environment with Apache PDFBox's reliable encryption and security features.</p>
+        </div>
+
+        <div class="tech-card">
+            <i class="fas fa-cogs" style="font-size: 3rem; color: var(--primary-color);"></i>
+            <h3>Advanced Features</h3>
+            <p>Leveraging PDFBox's capabilities for text extraction, merging, splitting, and more complex PDF operations.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features-section" id="features">
+    <div class="features-container">
+        <div class="section-header">
+            <h2>Why Choose Our PDF Tools</h2>
+            <p>We provide the best solution for all your PDF needs</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Secure Processing</h3>
+                <p>All files are processed securely in your browser. No documents are stored on our servers after processing.</p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fas fa-bolt"></i>
+                <h3>Fast Processing</h3>
+                <p>Our tools work quickly to process your documents without compromising quality.</p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fas fa-desktop"></i>
+                <h3>No Installation</h3>
+                <p>All tools work directly in your web browser. No need to download or install any software.</p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fas fa-money-bill-wave"></i>
+                <h3>Free to Use</h3>
+                <p>All basic tools are completely free with no watermarks or limitations.</p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Mobile Friendly</h3>
+                <p>Works perfectly on all devices including smartphones and tablets.</p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fas fa-cloud"></i>
+                <h3>Cloud Integration</h3>
+                <p>Connect with Google Drive, Dropbox and other cloud services.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-col">
+            <h4>About PDFlex</h4>
+            <ul>
+                <li><a href="#">Our Story</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Popular Tools</h4>
+            <ul>
+                <li><a href="merge.html">Merge PDF</a></li>
+                <li><a href="split.html">Split PDF</a></li>
+                <li><a href="edit.html">PDF Editor</a></li>
+                <li><a href="convert.html">PDF Converter</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Support</h4>
+            <ul>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Stay Connected</h4>
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+            </ul>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>&copy; 2023 PDFlex. All rights reserved.</p>
+        <p>Powered by Apache PDFBox</p>
+    </div>
+</footer>
+
+<script>
+    // Simple hover effect for tool cards
+    document.querySelectorAll('.tool-card').forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-5px)';
+            this.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+        });
+
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = '';
+            this.style.boxShadow = '';
+        });
+    });
+
+    // Function to format file size
+    function formatFileSize(bytes) {
+        if (bytes === 0) return '0 Bytes';
+        const k = 1024;
+        const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+        const i = Math.floor(Math.log(bytes) / Math.log(k));
+        return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+    }
+</script>
+</body>
+</html>

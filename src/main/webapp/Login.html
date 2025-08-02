@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - PDF Tools</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/Login.css">
+</head>
+<body>
+<div class="login-container">
+    <div class="login-header">
+        <h1>Welcome Back</h1>
+        <p>Sign in to access your PDF tools</p>
+    </div>
+
+    <form class="login-form" action="LoginHandler" method="POST">
+        <div class="form-group">
+            <label for="email">Email</label>
+            <i class="fas fa-envelope input-icon"></i>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <i class="fas fa-lock input-icon"></i>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        </div>
+
+        <div class="forgot-password">
+            <a href="forgot-password.html">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="login-btn">Sign In</button>
+
+        <div class="divider">OR</div>
+
+        <button type="button" class="google-btn">
+            <i class="fab fa-google"></i>
+            <span>Sign in with Google</span>
+        </button>
+    </form>
+
+    <div class="login-footer">
+        <p>Don't have an account? <a href="signup.html">Create Account</a></p>
+    </div>
+</div>
+</body>
+</html>
