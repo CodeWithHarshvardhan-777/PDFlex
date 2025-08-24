@@ -561,8 +561,9 @@
             loadingText.textContent = 'PDF Successfully Protected!';
             downloadContainer.style.display = 'block';
 
+
             // Set download link
-            downloadLink.href = '<%= request.getAttribute("fileUrl") %>';
+            downloadLink.href = 'download';
         <% } %>
     });
 </script>

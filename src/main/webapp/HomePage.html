@@ -1,204 +1,349 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>PDFMaster - Your Ultimate PDF Toolkit</title>
-    <!-- Google Fonts: Roboto for headings, Nunito Sans for body text -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Design</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/HomePage.css">
 </head>
 <body>
-
-<!-- Header -->
+<!-- Header & Navigation -->
 <header>
-    <nav class="navbar container">
-        <a href="index.html" class="logo">
-            <i class="fas fa-file-pdf"></i>
-            <span>PDFlex</span>
-        </a>
-        <!-- Mobile Menu Toggle Button -->
-        <div class="menu-toggle" id="menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <ul class="nav-links" id="nav-menu">
-            <li><a href="#features">Features</a></li>
-            <li><a href="#how-it-works">How It Works</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="Login.html">Login</a></li>
-            <li><a href="SignUp.html">Sign Up</a></li>
-        </ul>
-    </nav>
+    <div class="container">
+        <nav class="navbar">
+            <a href="#" class="logo">
+                <i class="fas fa-rocket"></i>
+                <span>Nexus</span>
+            </a>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Features</a>
+                <a href="#">How It Works</a>
+                <a href="#">Pricing</a>
+                <a href="#">About</a>
+            </div>
+
+            <div class="nav-buttons">
+                <a href="#" class="btn btn-light">Login</a>
+                <a href="#" class="btn btn-primary">Sign Up</a>
+            </div>
+        </nav>
+    </div>
 </header>
 
 <!-- Hero Section -->
-<section class="hero section-padding">
-    <div class="container hero-content fade-in">
-        <h1>Unlock the Power of <br>PDF Editing</h1>
-        <p>Your all-in-one solution for managing PDF documents online, offering seamless creation, editing, conversion, and more.</p>
-        <div class="hero-buttons">
-            <a href="#features" class="btn btn-hero-primary">Discover More</a>
-            <a href="MainPage.html" class="btn btn-hero-secondary">Start Editing Now</a>
+<section class="hero">
+    <div class="container hero-content">
+        <h1 class="fade-in">Transform Your Digital Experience</h1>
+        <p class="fade-in delay-1">A modern solution for all your needs. Fast, reliable, and beautifully designed to help you succeed in the digital world.</p>
+        <div class="hero-buttons fade-in delay-2">
+            <a href="#" class="btn btn-hero-primary">Get Started</a>
+            <a href="#" class="btn btn-hero-secondary">Learn More</a>
         </div>
     </div>
 </section>
 
 <!-- Features Section -->
-<section id="features" class="features-section section-padding">
-    <div class="container">
-        <h2 class="section-title fade-in">Explore Our Powerful Features</h2>
-        <div class="features-grid">
+<section class="features-section section-padding">
+    <div class="container features-container">
+        <h2 class="section-title">Our Features</h2>
+        <div class="features-grid" id="features-carousel">
             <div class="feature-card fade-in">
-                <div class="icon"><i class="fas fa-file-pdf"></i></div>
-                <h3>Create & Edit</h3>
-                <p>Effortlessly create new PDFs or modify existing ones with our intuitive tools.</p>
+                <div class="icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3>Lightning Fast</h3>
+                <p>Experience blazing fast performance with our optimized technology stack and cloud infrastructure.</p>
             </div>
-            <div class="feature-card fade-in">
-                <div class="icon"><i class="fas fa-cut"></i></div>
-                <h3>Merge & Split</h3>
-                <p>Combine multiple PDFs into one or divide large documents into smaller, manageable files.</p>
+
+            <div class="feature-card fade-in delay-1">
+                <div class="icon">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <h3>Secure & Safe</h3>
+                <p>Enterprise-grade security ensures your data is always protected with end-to-end encryption.</p>
             </div>
-            <div class="feature-card fade-in">
-                <div class="icon"><i class="fas fa-exchange-alt"></i></div>
-                <h3>Convert & Optimize</h3>
-                <p>Convert PDFs to various formats and optimize them for web or print with ease.</p>
+
+            <div class="feature-card fade-in delay-2">
+                <div class="icon">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <h3>Beautiful Design</h3>
+                <p>Enjoy a seamless experience with our carefully crafted UI/UX designed for maximum productivity.</p>
             </div>
-            <div class="feature-card fade-in">
-                <div class="icon"><i class="fas fa-highlighter"></i></div>
-                <h3>Annotate & Sign</h3>
-                <p>Add comments, highlights, and electronic signatures to your PDF documents securely.</p>
+
+            <div class="feature-card fade-in delay-3">
+                <div class="icon">
+                    <i class="fas fa-sync-alt"></i>
+                </div>
+                <h3>Auto Sync</h3>
+                <p>Keep all your devices in sync with our real-time synchronization technology across platforms.</p>
             </div>
-            <div class="feature-card fade-in">
-                <div class="icon"><i class="fas fa-lock"></i></div>
-                <h3>Protect & Secure</h3>
-                <p>Protect your sensitive information with password encryption and permission controls.</p>
+
+            <div class="feature-card fade-in delay-4">
+                <div class="icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Advanced Analytics</h3>
+                <p>Gain valuable insights with our comprehensive analytics dashboard and reporting tools.</p>
             </div>
-            <div class="feature-card fade-in">
-                <div class="icon"><i class="fas fa-copy"></i></div>
-                <h3>Organize Pages</h3>
-                <p>Rearrange, delete, or rotate pages within your PDF documents as needed.</p>
+
+            <div class="feature-card fade-in delay-5">
+                <div class="icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3>24/7 Support</h3>
+                <p>Our dedicated support team is available around the clock to assist you with any issues.</p>
             </div>
+        </div>
+
+        <div class="features-scroll-indicator" id="features-indicator">
+            <div class="scroll-dot active" data-index="0"></div>
+            <div class="scroll-dot" data-index="1"></div>
+            <div class="scroll-dot" data-index="2"></div>
         </div>
     </div>
 </section>
 
 <!-- How It Works Section -->
-<section id="how-it-works" class="how-it-works-section section-padding">
+<section class="how-it-works-section section-padding">
     <div class="container">
-        <h2 class="section-title fade-in">Simple Steps to PDF Mastery</h2>
+        <h2 class="section-title">How It Works</h2>
         <div class="steps-grid">
             <div class="step-card fade-in">
                 <div class="step-number">1</div>
-                <h3>Select Your Tool</h3>
-                <p>Choose from our wide range of tools to edit, convert, merge, or split your PDF.</p>
+                <h3>Sign Up</h3>
+                <p>Create your account in less than a minute with our simple onboarding process.</p>
             </div>
-            <div class="step-card fade-in">
+
+            <div class="step-card fade-in delay-1">
                 <div class="step-number">2</div>
-                <h3>  Upload Your PDF</h3>
-                <p> Easily upload your PDF file from your computer or cloud storage.</p>
+                <h3>Customize</h3>
+                <p>Tailor the platform to your specific needs with our easy-to-use customization tools.</p>
             </div>
-            <div class="step-card fade-in">
+
+            <div class="step-card fade-in delay-2">
                 <div class="step-number">3</div>
-                <h3>Process & Download</h3>
-                <p>Let PDFMaster handle the processing, and download your modified PDF instantly.</p>
+                <h3>Enjoy</h3>
+                <p>Start experiencing the benefits and watch your productivity soar to new heights.</p>
             </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section class="pricing-section">
+    <div class="container pricing-container">
+        <h2 class="section-title">Simple, Transparent Pricing</h2>
+        <div class="pricing-grid" id="pricing-carousel">
+            <div class="pricing-card fade-in">
+                <h3 class="price-plan">Starter</h3>
+                <div class="price-amount">
+                    <span class="price-currency">$</span>
+                    <span>19</span>
+                    <span class="price-period">/month</span>
+                </div>
+                <ul class="price-features">
+                    <li><i class="fas fa-check"></i> Up to 5 projects</li>
+                    <li><i class="fas fa-check"></i> 10GB storage</li>
+                    <li><i class="fas fa-check"></i> Basic analytics</li>
+                    <li><i class="fas fa-check"></i> Email support</li>
+                    <li><i class="fas fa-times" style="color: #ef4444;"></i> Advanced features</li>
+                </ul>
+                <a href="#" class="btn btn-outline">Get Started</a>
+            </div>
+
+            <div class="pricing-card popular fade-in delay-1">
+                <h3 class="price-plan">Professional</h3>
+                <div class="price-amount">
+                    <span class="price-currency">$</span>
+                    <span>49</span>
+                    <span class="price-period">/month</span>
+                </div>
+                <ul class="price-features">
+                    <li><i class="fas fa-check"></i> Unlimited projects</li>
+                    <li><i class="fas fa-check"></i> 100GB storage</li>
+                    <li><i class="fas fa-check"></i> Advanced analytics</li>
+                    <li><i class="fas fa-check"></i> Priority support</li>
+                    <li><i class="fas fa-check"></i> All features included</li>
+                </ul>
+                <a href="#" class="btn btn-primary">Get Started</a>
+            </div>
+
+            <div class="pricing-card fade-in delay-2">
+                <h3 class="price-plan">Enterprise</h3>
+                <div class="price-amount">
+                    <span class="price-currency">$</span>
+                    <span>99</span>
+                    <span class="price-period">/month</span>
+                </div>
+                <ul class="price-features">
+                    <li><i class="fas fa-check"></i> Unlimited everything</li>
+                    <li><i class="fas fa-check"></i> 1TB storage</li>
+                    <li><i class="fas fa-check"></i> Custom analytics</li>
+                    <li><i class="fas fa-check"></i> 24/7 dedicated support</li>
+                    <li><i class="fas fa-check"></i> White-label options</li>
+                </ul>
+                <a href="#" class="btn btn-outline">Contact Sales</a>
+            </div>
+        </div>
+
+        <div class="pricing-scroll-indicator" id="pricing-indicator">
+            <div class="scroll-dot active" data-index="0"></div>
+            <div class="scroll-dot" data-index="1"></div>
+            <div class="scroll-dot" data-index="2"></div>
         </div>
     </div>
 </section>
 
 <!-- CTA Section -->
-<section id="cta" class="cta-section section-padding">
-    <div class="container fade-in">
-        <h2>Ready to Transform Your PDF Workflow?</h2>
-        <p>Join thousands of professionals who rely on PDFMaster for their document management needs.</p>
-        <a href="MainPage.html" class="btn btn-cta">Get Started for Free</a>
+<section class="cta-section section-padding">
+    <div class="container">
+        <h2 class="fade-in">Ready to Get Started?</h2>
+        <p class="fade-in delay-1">Join thousands of satisfied users who have transformed their workflow with our platform.</p>
+        <a href="#" class="btn btn-hero-primary fade-in delay-2">Start Free Trial</a>
     </div>
 </section>
 
 <!-- Footer -->
-<footer id="contact">
-    <div class="container footer-content">
-        <div class="footer-col fade-in">
-            <h4>About PDFMaster</h4>
-            <ul>
-                <li><a href="#">Our Story</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Blog</a></li>
-            </ul>
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">API</a></li>
+                    <li><a href="#">Community</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Product</h4>
+                <ul>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Use Cases</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <p>Stay updated with our latest news and updates.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
         </div>
-        <div class="footer-col fade-in">
-            <h4>Popular Tools</h4>
-            <ul>
-                <li><a href="#">Merge PDF</a></li>
-                <li><a href="#">Split PDF</a></li>
-                <li><a href="#">PDF Editor</a></li>
-                <li><a href="#">PDF Converter</a></li>
-            </ul>
+
+        <div class="footer-bottom">
+            <p>&copy; 2023 Nexus. All rights reserved.</p>
         </div>
-        <div class="footer-col fade-in">
-            <h4>Support</h4>
-            <ul>
-                <li><a href="#">Help Center</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Service</a></li>
-            </ul>
-        </div>
-        <div class="footer-col fade-in">
-            <h4>Stay Connected</h4>
-            <ul>
-                <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
-                <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
-                <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="footer-bottom container">
-        &copy; 2025 PDFMaster. All rights reserved.
     </div>
 </footer>
 
+<!-- JavaScript -->
 <script>
-    // --- Mobile Menu Toggle Logic ---
-    const menuToggle = document.getElementById('menu-toggle');
-    const navMenu = document.getElementById('nav-menu');
+    // Mobile menu toggle
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+    const navButtons = document.querySelector('.nav-buttons');
 
-    menuToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        menuToggle.classList.toggle('active');
+    mobileMenu.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+        navLinks.classList.toggle('active');
+        navButtons.classList.toggle('active');
+        document.body.style.overflow = document.body.style.overflow === 'hidden' ? '' : 'hidden';
     });
 
-    // Close menu when a link is clicked (for smooth scrolling)
-    document.querySelectorAll('#nav-menu a').forEach(link => {
+    // Scroll reveal animation
+    function checkScroll() {
+        const elements = document.querySelectorAll('.fade-in');
+        elements.forEach(element => {
+            const elementPosition = element.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.3;
+
+            if (elementPosition < screenPosition) {
+                element.classList.add('active');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkScroll);
+    window.addEventListener('load', checkScroll);
+
+    // Carousel functionality for features and pricing
+    function setupCarousel(carouselId, indicatorId) {
+        const carousel = document.getElementById(carouselId);
+        const indicators = document.querySelectorAll(`#${indicatorId} .scroll-dot`);
+
+        if (!carousel) return;
+
+        // Update indicators on scroll
+        carousel.addEventListener('scroll', () => {
+            const scrollPos = carousel.scrollLeft;
+            const cardWidth = carousel.querySelector('.feature-card, .pricing-card').offsetWidth + 32; // width + gap
+            const activeIndex = Math.round(scrollPos / cardWidth);
+
+            indicators.forEach((dot, index) => {
+                if (index === activeIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        });
+
+        // Click on indicator to scroll to that card
+        indicators.forEach(dot => {
+            dot.addEventListener('click', () => {
+                const index = parseInt(dot.getAttribute('data-index'));
+                const cardWidth = carousel.querySelector('.feature-card, .pricing-card').offsetWidth + 32;
+                carousel.scrollTo({
+                    left: index * cardWidth,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    }
+
+    // Initialize carousels
+    setupCarousel('features-carousel', 'features-indicator');
+    setupCarousel('pricing-carousel', 'pricing-indicator');
+
+    // Close mobile menu when clicking on links
+    document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
-            if (navMenu.classList.contains('active')) {
-                navMenu.classList.remove('active');
-                menuToggle.classList.remove('active');
-            }
+            mobileMenu.classList.remove('active');
+            navLinks.classList.remove('active');
+            navButtons.classList.remove('active');
+            document.body.style.overflow = '';
         });
-    });
-
-    // --- Scroll Reveal Animation Logic ---
-    const fadeInElements = document.querySelectorAll('.fade-in');
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-                observer.unobserve(entry.target); // Stop observing once animated
-            }
-        });
-    }, {
-        threshold: 0.1 // Trigger when 10% of the element is visible
-    });
-
-    fadeInElements.forEach(element => {
-        observer.observe(element);
     });
 </script>
-
 </body>
 </html>
