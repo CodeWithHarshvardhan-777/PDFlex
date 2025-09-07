@@ -1,7 +1,7 @@
 # 📄 PDFlex – Unlock the Power of PDF Editing
 
 ⚠️ Project Under Construction
-We’re working hard to bring you the best all-in-one PDF solution. Some features may not yet be available. Stay tuned for updates!
+We’re currently working hard to bring you the best all-in-one PDF solution. Most of features are still in progress, but we’re constantly improving. Stay tuned for updates!
 
 Your **all-in-one online solution** for seamless PDF document management — create, edit, convert, annotate, and secure your PDFs with ease.
 
