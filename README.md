@@ -14,10 +14,7 @@ Your **all-in-one online solution** for seamless PDF document management — cre
 - ✏️ **Create & Edit** – Intuitive tools for crafting new PDFs or modifying existing ones  
 - 🔀 **Merge & Split** – Combine multiple PDFs or split large ones into manageable pieces  
 - 🔄 **Convert & Optimize** – Convert PDFs to other formats and optimize for web or print  
-- 🖍️ **Annotate & Sign** – Add comments, highlights, and electronic signatures  
 - 🔒 **Protect & Secure** – Password-protect and manage PDF permissions  
-- 🗂️ **Organize Pages** – Rearrange, rotate, or delete pages effortlessly  
-
 ---
 
 ## 🛠️ How It Works
