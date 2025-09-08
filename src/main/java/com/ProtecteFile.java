@@ -14,7 +14,7 @@ import org.apache.pdfbox.pdmodel.encryption.StandardProtectionPolicy;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.lang.reflect.AccessibleObject;
+
 
 @MultipartConfig(
         fileSizeThreshold = 1024 * 1024,
@@ -77,6 +77,7 @@ public class ProtecteFile extends HttpServlet {
 
             try(OutputStream outputStream = resp.getOutputStream())
             {
+                req.setAttribute("success","success");
                 pdDocument.save(outputStream);
             }catch (Exception e)
             {

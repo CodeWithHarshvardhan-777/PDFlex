@@ -51,7 +51,7 @@
         </div>
     <% } %>
 
-    <form id="protectForm" action="fileProtector" method="post" enctype="multipart/form-data">
+    <form id="protectForm" action="protectPdf" method="post" enctype="multipart/form-data">
         <section class="upload-section">
             <div class="upload-icon">
                 <i class="fas fa-lock"></i>
@@ -285,55 +285,6 @@
         <p>&copy; 2023 PDFlex. All rights reserved.</p>
     </div>
 </footer>
-
-<!-- Loading overlay -->
-<div class="loading-overlay" id="loadingOverlay">
-    <div class="loading-content">
-        <span class="close-overlay" id="closeOverlay">&times;</span>
-
-        <div class="loading-spinner" id="loadingSpinner"></div>
-        <i class="fas fa-check-circle success-icon" id="successIcon"></i>
-
-        <h3 class="loading-text" id="loadingText">Processing your PDF file...</h3>
-
-        <div class="progress-container">
-            <div class="progress-info">
-                <span id="progressPercentage">0%</span>
-                <span id="progressStatus">Uploading file...</span>
-            </div>
-            <div class="progress-bar">
-                <div class="progress" id="progressBar"></div>
-            </div>
-        </div>
-
-        <div class="processing-steps" id="processingSteps">
-            <div class="processing-step" id="step1">
-                <div class="step-icon"><i class="fas fa-upload"></i></div>
-                <div class="step-text">Uploading PDF file</div>
-            </div>
-            <div class="processing-step" id="step2">
-                <div class="step-icon"><i class="fas fa-lock"></i></div>
-                <div class="step-text">Applying password protection</div>
-            </div>
-            <div class="processing-step" id="step3">
-                <div class="step-icon"><i class="fas fa-cog"></i></div>
-                <div class="step-text">Applying security settings</div>
-            </div>
-            <div class="processing-step" id="step4">
-                <div class="step-icon"><i class="fas fa-file-pdf"></i></div>
-                <div class="step-text">Generating protected PDF</div>
-            </div>
-        </div>
-
-        <div class="download-container" id="downloadContainer">
-            <p>Your protected PDF is ready to download!</p>
-            <a href="#" class="download-link" id="downloadLink">
-                <i class="fas fa-download"></i> Download Protected PDF
-            </a>
-        </div>
-    </div>
-</div>
-
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         // File selection display
@@ -531,15 +482,21 @@
             }, 50);
         });
 
-        // Check if there's a success message from the server
+        // check message
         <% if (request.getAttribute("success") != null) { %>
+            showSuccessState();
+        <% } %>
+
+        // Function to show success state immediately
+        function showSuccessState() {
             const loadingOverlay = document.getElementById('loadingOverlay');
             const loadingSpinner = document.getElementById('loadingSpinner');
             const successIcon = document.getElementById('successIcon');
             const loadingText = document.getElementById('loadingText');
             const progressBar = document.getElementById('progressBar');
+            const progressPercentage = document.getElementById('progressPercentage');
+            const progressStatus = document.getElementById('progressStatus');
             const downloadContainer = document.getElementById('downloadContainer');
-            const downloadLink = document.getElementById('downloadLink');
             const processingSteps = document.getElementById('processingSteps');
             const step1 = document.getElementById('step1');
             const step2 = document.getElementById('step2');
@@ -551,20 +508,20 @@
                 step.classList.add('completed');
             });
 
-            // Show success state
+            // Show success state immediately without animation
             loadingOverlay.classList.add('active');
             loadingSpinner.style.display = 'none';
             successIcon.style.display = 'block';
             progressBar.style.width = '100%';
-            document.getElementById('progressPercentage').textContent = '100%';
-            document.getElementById('progressStatus').textContent = 'Processing complete!';
+            progressBar.style.backgroundColor = '#10b981';
+            progressPercentage.textContent = '100%';
+            progressStatus.textContent = 'Processing complete!';
             loadingText.textContent = 'PDF Successfully Protected!';
             downloadContainer.style.display = 'block';
 
-
             // Set download link
-            downloadLink.href = 'download';
-        <% } %>
+            document.getElementById('downloadLink').href = 'download';
+        }
     });
 </script>
 </body>
