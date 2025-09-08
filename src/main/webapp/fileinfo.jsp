@@ -47,7 +47,7 @@
         <% } %>
 
         <!-- Upload Form -->
-        <form id="infoForm" action="FileInfo" method="post" enctype="multipart/form-data">
+        <form id="infoForm" action="SeeFileInformation" method="post" enctype="multipart/form-data">
             <section class="upload-section">
                 <div class="upload-icon">
                     <i class="fas fa-info-circle"></i>

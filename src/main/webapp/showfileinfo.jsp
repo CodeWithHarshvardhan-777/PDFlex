@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/showfileinfo.css">
-</head>
+    </head>
 <body>
     <!-- Header/Navigation -->
     <header>
@@ -43,7 +43,7 @@
 
         <!-- Server-side messages -->
         <% if (request.getAttribute("error") != null) { %>
-            <div class="message error"><%= request.getAttribute("error") %></div>
+            <div class="message error"><i class="fas fa-exclamation-circle"></i> <%= request.getAttribute("error") %></div>
         <% } %>
 
         <!-- File Summary -->
@@ -64,7 +64,7 @@
         <!-- Information Grid -->
         <div class="info-grid">
             <div class="info-card">
-                <h3>Basic Information</h3>
+                <h3><i class="fas fa-info-circle"></i> Basic Information</h3>
                 <div class="info-item">
                     <span class="info-label">File Name:</span>
                     <span class="info-value"><%= request.getAttribute("fileName") %></span>
@@ -84,7 +84,7 @@
             </div>
 
             <div class="info-card">
-                <h3>Document Metadata</h3>
+                <h3><i class="fas fa-database"></i> Document Metadata</h3>
                 <div class="info-item">
                     <span class="info-label">Title:</span>
                     <span class="info-value <%= request.getAttribute("title") == null ? "not-specified" : "" %>">
@@ -124,7 +124,7 @@
             </div>
 
             <div class="info-card">
-                <h3>Dates</h3>
+                <h3><i class="fas fa-calendar-alt"></i> Dates</h3>
                 <div class="info-item">
                     <span class="info-label">Creation Date:</span>
                     <span class="info-value <%= request.getAttribute("Creation") == null ? "not-specified" : "" %>">
@@ -156,29 +156,29 @@
             <div class="footer-col">
                 <h4>About PDFlex</h4>
                 <ul>
-                    <li><a href="#">Our Story</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Blog</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Our Story</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Careers</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Blog</a></li>
                 </ul>
             </div>
 
             <div class="footer-col">
                 <h4>Popular Tools</h4>
                 <ul>
-                    <li><a href="merge.html">Merge PDF</a></li>
-                    <li><a href="split.html">Split PDF</a></li>
-                    <li><a href="edit.html">PDF Editor</a></li>
-                    <li><a href="convert.html">PDF Converter</a></li>
+                    <li><a href="merge.html"><i class="fas fa-chevron-right"></i> Merge PDF</a></li>
+                    <li><a href="split.html"><i class="fas fa-chevron-right"></i> Split PDF</a></li>
+                    <li><a href="edit.html"><i class="fas fa-chevron-right"></i> PDF Editor</a></li>
+                    <li><a href="convert.html"><i class="fas fa-chevron-right"></i> PDF Converter</a></li>
                 </ul>
             </div>
 
             <div class="footer-col">
                 <h4>Support</h4>
                 <ul>
-                    <li><a href="#">Help Center</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Help Center</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>
                 </ul>
             </div>
 
@@ -190,9 +190,9 @@
                     <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
                 </ul>
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
@@ -204,20 +204,34 @@
     </footer>
 
     <script>
-        // Simple animation for elements when page loads
+        // Enhanced animations for elements when page loads
         document.addEventListener('DOMContentLoaded', function() {
-            const elements = document.querySelectorAll('.file-summary, .info-card');
+            const elements = document.querySelectorAll('.file-summary, .info-card, .action-buttons');
 
+            // Initial state for all animated elements
+            elements.forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            });
+
+            // Animate elements with staggered delay
             elements.forEach((element, index) => {
                 setTimeout(() => {
                     element.style.opacity = '1';
                     element.style.transform = 'translateY(0)';
-                }, 100 * index);
+                }, 150 * index);
+            });
 
-                // Initial state
-                element.style.opacity = '0';
-                element.style.transform = 'translateY(20px)';
-                element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            // Add hover effect to cards
+            const cards = document.querySelectorAll('.info-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.transform = 'translateY(-8px)';
+                });
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'translateY(0)';
+                });
             });
         });
     </script>
