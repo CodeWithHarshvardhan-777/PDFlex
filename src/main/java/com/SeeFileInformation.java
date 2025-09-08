@@ -75,8 +75,12 @@ public class SeeFileInformation extends HttpServlet {
             // make data formatter
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss a z");
 
+            // fix null date bug
+            String calendarIsNull = (calendar != null) ? simpleDateFormat.format(calendar.getTime()) : "";
 
-                    // set Attribute
+            String calendar1IsNull = (calendar1 != null) ? simpleDateFormat.format(calendar1.getTime()) : "";
+
+            // set Attribute
             req.setAttribute("fileName",fileName);
             req.setAttribute("title",information.getTitle());
             req.setAttribute("fileSize",readAble);
@@ -87,8 +91,8 @@ public class SeeFileInformation extends HttpServlet {
             req.setAttribute("keyword",information.getKeywords());
             req.setAttribute("creator",information.getCreator());
             req.setAttribute("producer",information.getCreator());
-            req.setAttribute("Creation",simpleDateFormat.format(calendar.getTime()));
-            req.setAttribute("Modification",simpleDateFormat.format(calendar1.getTime()));
+            req.setAttribute("Creation",calendarIsNull);
+            req.setAttribute("Modification",calendar1IsNull);
 
             // forward attribute
             req.getRequestDispatcher("showfileinfo.jsp").forward(req,resp);
