@@ -11,9 +11,11 @@ import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.encryption.AccessPermission;
 import org.apache.pdfbox.pdmodel.encryption.StandardProtectionPolicy;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 
 @MultipartConfig(
@@ -53,9 +55,41 @@ public class ProtecteFile extends HttpServlet {
             return;
         }
 
+        // make unique file name
+        String baseFileName = fileName.substring(0,fileName.lastIndexOf("."));
+        String timeStamp = new SimpleDateFormat("yyyyMMddHHss").format(new Date());
+        String uniqueName = baseFileName + "_" + timeStamp + ".pdf";
+
+        // create folder for save protected files
+        String uploadPath = "C:\\Users\\Admin\\IdeaProject\\PDFMaster\\protectedFiles";
+        File uploadFolder = new File(uploadPath);
+        if(!uploadFolder.exists()) uploadFolder.mkdir();
+
+
+
         try(InputStream inputStream = normalFile.getInputStream();
             PDDocument pdDocument = PDDocument.load(inputStream))
         {
+
+            // find file size
+            long fileSize = normalFile.getSize();
+
+            // Store in Human Readable Format
+            String readAble;
+            if(fileSize < 1024)
+            {
+                readAble = fileSize + "Bytes";
+            } else if (fileSize < (1024 * 1024)) {
+                double KB = fileSize / 1024.0;
+                readAble = String.format("%.2f KB",KB);
+            } else if (fileSize < (1024 * 1024 * 1024)) {
+                double MB = fileSize / (1024.0 * 1024.0);
+                readAble = String.format("%.2f MB",MB);
+            }else {
+                double GB = fileSize / (1024.0 * 1024.0 * 1024);
+                readAble = String.format("%.2f GB",GB);
+            }
+
             // configure permission
             AccessPermission permission = new AccessPermission();
 
@@ -75,16 +109,17 @@ public class ProtecteFile extends HttpServlet {
 
             pdDocument.protect(protectionPolicy);
 
-            try(OutputStream outputStream = resp.getOutputStream())
-            {
-                req.setAttribute("success","success");
-                pdDocument.save(outputStream);
-            }catch (Exception e)
-            {
-                req.setAttribute("error", e.getMessage());
-                req.getRequestDispatcher("pdflex-protectpdf.jsp").forward(req,resp);
-                return;
-            }
+            // save file in folder
+            File saveFile = new File(uploadFolder, uniqueName);
+            pdDocument.save(saveFile);
+
+            req.setAttribute("success","PDF Protected Successfully.");
+            req.setAttribute("filePath",uniqueName);
+            req.setAttribute("fileName",fileName);
+            req.setAttribute("fileSize",readAble);
+            req.setAttribute("fileType","pdf");
+            req.getRequestDispatcher("download-protectedfile.jsp").forward(req,resp);
+
 
         }
 
