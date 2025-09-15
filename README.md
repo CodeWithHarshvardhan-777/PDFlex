@@ -31,14 +31,6 @@ Need help or have questions?
 Reach us anytime via [Contact Page](#) or email at `support@pdfflex.com`  
 Follow us on:  
 [Facebook](#) | [Twitter](#) | [LinkedIn](#)
-
----
-
-## 🔐 Login & Sign Up
-
-- [Login to your account](#)
-- [Create a free account](#) to start editing PDFs in seconds!
-
 ---
 
 ## 🌟 About PDFlex
