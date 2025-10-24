@@ -25,14 +25,6 @@ Your **all-in-one online solution** for seamless PDF document management — cre
 
 ---
 
-## 📬 Contact
-
-Need help or have questions?  
-Reach us anytime via [Contact Page](#) or email at `support@pdfflex.com`  
-Follow us on:  
-[Facebook](#) | [Twitter](#) | [LinkedIn](#)
----
-
 ## 🌟 About PDFlex
 
 PDFlex is trusted by **thousands of professionals** to streamline their document workflows.  
